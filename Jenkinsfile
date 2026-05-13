@@ -2,7 +2,7 @@ pipeline {
  agent any
   environment{
   ACR_LOGIN_SERVER = 'devopsproject1.azurecr.io'
-  IMAGE_NAME = 'eakrt-webapp'
+  IMAGE_NAME = 'ekart-webapp'
   TAG = 'latest'
   }
   stages{
