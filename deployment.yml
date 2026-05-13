@@ -29,6 +29,6 @@ spec:
  type: LoadBalancer
  ports:
    - targetPort: 80
-     Port: 80
+     port: 80
  selector:
   app: web
