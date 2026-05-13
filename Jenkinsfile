@@ -9,7 +9,9 @@ pipeline {
 	
 	}
 	stage ('Build app&image'){
+	 steps{
 	 docker build -t ekart-webapp .
+	 }
 	
 	}
   
