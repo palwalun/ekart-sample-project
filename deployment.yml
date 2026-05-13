@@ -19,7 +19,7 @@ spec:
     - name: ekart-container
       image: devopsproject1.azurecr.io/ekart-webapp:latest
       ports:
-       - containerPort: 80
+       - containerPort: 8080
 ---
 apiVersion: v1
 kind: Service
@@ -28,7 +28,7 @@ metadata:
 spec:
  type: LoadBalancer
  ports:
-   - targetPort: 80
+   - targetPort: 8080
      port: 80
  selector:
   app: web

@@ -9,7 +9,7 @@ RUN mvn -B clean package -DskipTests
 
 # -----Runtime-------
 
-FROM eclipse-temurin:17-jre
+FROM openjdk:8-jdk-alpine
 WORKDIR /app
 COPY --from=builder /app/target/*.jar app.jar
 EXPOSE 8080
