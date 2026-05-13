@@ -17,7 +17,7 @@ spec:
   spec:
    containers:
     - name: ekart-container
-      image: devopsproject2.azurecr.io/ekart-webapp:latest
+      image: devopsproject1.azurecr.io/ekart-webapp:latest
       ports:
        - containerPort: 80
 ---
