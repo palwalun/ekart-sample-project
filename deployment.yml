@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+ name: ekart-deploy
+ labels:
+  app: web
+spec:
+ replicas: 3
+ selector:
+  matchLabels:
+   app: web
+ template:
+  metadata:
+   name: ekart-pod
+   labels:
+    app: web
+  spec:
+   containers:
+    - name: ekart-container
+      image: devopsproject2.azurecr.io/ekart-webapp:latest
+      ports:
+       - containerPort: 80
+	
+---
+apiVersion: v1
+kind: Service
+metadata:
+ name: ekart-service
+spec:
+ type: LoadBalancer
+ ports:
+   - targetPort: 80
+     Port: 80
+ selector:
+  app: web
